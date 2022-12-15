@@ -27,20 +27,33 @@
         rel="stylesheet">
     <!--! Google fonts link -->
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="./asset/style.css">
     <title>Document</title>
 </head>
 
 <body>
-
     <header>
+
+        <!--! Loading -->
+        <div class="loading-wrapper">
+            <div class="spinner-grow text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+        <!--! Loading -->
+
+
+
         <!--! top header start -->
         <div class="top-header">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-12">
-                        <ul class="list">
+                        <ul class="list-icon">
                             <li class="list-item"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                             <li class="list-item"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
                             <li class="list-item"><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
@@ -79,6 +92,7 @@
 
                             <ul class="nav-list-hamburger">
                                 <div class="close">
+                                    <img src="./asset/images/logo.png" alt="">
                                     <button class="close-btn"><i class="fa-solid fa-x"></i></button>
                                 </div>
 
@@ -124,12 +138,12 @@
         <section>
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="winter-img">
                             <img src="./asset/images/13.jpg" alt="">
                         </div>
                     </div>
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="winter-inner">
                             <h1>Winter Walking Shoes</h1>
                             <p class="price">$29.00</p>
@@ -140,6 +154,139 @@
                                 ullamco
                                 laboris nisi ut aliquip ex ea commodo consequat. duis aute irure dolor in reprehenderit.
                             </p>
+                            <div class="d-flex mt-5">
+                                <div class="number">
+                                    <span class="count">0</span>
+                                    <span>
+                                        <button class="increase"><i class="fa-solid fa-chevron-up"></i></button>
+                                        <button class="decrease"><i class="fa-solid fa-chevron-down"></i></button>
+                                    </span>
+                                </div>
+                                <div>
+                                    <button class="addCard">Add To Cart</button>
+                                </div>
+                            </div>
+                            <p class="mt-4">Category: <span class="text-secondary">Products Shoes</span></p>
+                            <ul class="winter-icon-list">
+                                <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-google"></i></a></li>
+                                <li><a href="#"><i class="fa-brands fa-skype"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--! Description -->
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="btns">
+                            <button class="description-btn">Description</button>
+                            <button class="reviews-btn">Reviews</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12">
+                        <h2 class="my-5 description-h2">Product Description</h2>
+                        <p class="description-paragraph">Leverage agile frameworks to provide a
+                            robust synopsis for high
+                            level overviews. Iterative
+                            approaches to corporate strategy foster collaborative thinking to further the overall value
+                            proposition. Organically grow the holistic world view of disruptive innovation via workplace
+                            diversity and empowerment.Bring to the table win-win survival strategies to ensure proactive
+                            domination. runway heading towards a streamlined cloud solution.</p>
+                        <p class="description-paragraph">Collaboratively administrate empowered markets via
+                            plug-and-play networks. Dynamically
+                            procrastinate B2C users after installed base benefits. Dramatically visualize customer
+                            directed convergence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--! Reviews -->
+        <!-- <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="d-flex">
+                            <div>
+                                <span><i class="fa-solid fa-user"></i></span>
+                            </div>
+                            <div>
+                                <h3>Steven Rich <span>– January 17, 2019:</span></h3>
+                                <p>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </p>
+                                <p>
+                                    Value for money , I use it from long time and it is very useful and good product.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+        <!--! Raleted Products -->
+        <section id="products">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between mt-5">
+                            <h1 class="carousel-header">Raleted Products</h1>
+                            <div class="d-flex">
+                                <button class="btn-prev carousel-btn"><i class="fa-solid fa-chevron-left"></i></button>
+                                <button class="btn-next carousel-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="wrapper">
+                            <div class="carousel">
+                                <div>
+                                    <img src="./asset/images/1 (1).jpg">
+                                    <h5>Cold Crewneck Sweater</h5>
+                                    <p>$40.75</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/images/2 (1).jpg">
+                                    <h5>Cold Crewneck Sweater</h5>
+                                    <p>$40.75</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/images/3 (1).jpg">
+                                    <h5>Cold Crewneck Sweater</h5>
+                                    <p>$40.75</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/images/4 (1).jpg">
+                                    <h5>Cold Crewneck Sweater</h5>
+                                    <p>$40.75</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/images/1.jpg">
+                                    <h5>Cold Crewneck Sweater</h5>
+                                    <p>$40.75</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/images/3 (2).jpg">
+                                    <h5>Cold Crewneck Sweater</h5>
+                                    <p>$40.75</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -148,9 +295,165 @@
     </main>
 
 
-    <!-- <div class="go-to-top"> -->
+    <!--! footer  start-->
+    <footer id="footer" class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="newsletter">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <h1>Subscribe to Our <br> Newsletter</h1>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="newsletter-email">
+                                    <input type="text" class="text-dark" placeholder="Your email...">
+                                    <button>SUBSCRIBE NOW</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <div class="my-5">
+                        <img src="./asset/images/footer-logo.png" alt="">
+                    </div>
+                    <div class="footer-paragraph">
+                        <p>Lorem ipsum dolor amet consecte adipisicing elit sed eiusm tempor incididunt ut labore dolore
+                            magna aliqua enim ad minim veniam. quis nostrud exercitation ullam</p>
+                        <p>Duis aute irure dolor in reprehend it in voluptate velit cillum.dolore eu fugiat nulla.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+
+                    <h3 class="mt-5">Twitter Feeds</h3>
+                    <div>
+                        <p><i class="fa-brands fa-twitter text-primary me-2"></i>Kirstin Hagel</p>
+                        <p class="ms-3">@KirstinHagel . 7 Dec</p>
+                        <p>Excepteur sint occaecat cupidatat proent. <a href="https://T.Co/Sr45bvMJU6"
+                                class="text-danger">https://T.Co/Sr45bvMJU6</a></p>
+                    </div>
+                    <div>
+                        <p><i class="fa-brands fa-twitter text-primary me-2"></i>Kirstin Hagel</p>
+                        <p class="ms-3">@KirstinHagel . 7 Dec</p>
+                        <p>Excepteur sint occaecat cupidatat proent. <a href="https://T.Co/Sr45bvMJU6"
+                                class="text-danger">https://T.Co/Sr45bvMJU6</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3 class="mt-5">Latest Articles</h3>
+                    <div>
+                        <p>26 Dec, 2018</p>
+                        <p>Aspernatur aut odit fugit quia</p>
+                    </div>
+                    <div>
+                        <p>26 Dec, 2018</p>
+                        <p>Aspernatur aut odit fugit quia</p>
+                    </div>
+                    <div>
+                        <p>26 Dec, 2018</p>
+                        <p>Aspernatur aut odit fugit quia</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12">
+                    <h3 class="mt-5">Contact Info</h3>
+                    <div>
+                        <p>Flat 20, Reynolds Neck, North Hele
+                            naville, FV77 8WS
+                        </p>
+                        <p>
+                            +2(305) 587-3407
+                        </p>
+                        <p>
+                            info@barnet.com
+                        </p>
+                        <ul class="footer-list mt-4">
+                            <li><a href="#" class="google"><i class="fa-brands fa-google"></i></a></li>
+                            <li><a href="#" class="facebook"><i class="fa-brands fa-facebook-f"></i></a></li>
+                            <li><a href="#" class="basketball"><i class="fa-solid fa-basketball"></i></a></li>
+                            <li><a href="#" class="twitter"><i class="fa-brands fa-twitter"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <p>Barnet © 2019 All Right Reserved</p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <div class="footer-bottom-right">
+                            <span class="me-3">Terms of Service</span>
+                            <span class="vr"></span>
+                            <span class="ms-3">Privacy Policy</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--! footer  end-->
+
+
+
+    <!--! go to top -->
     <button onclick="topFunction()" id="go-to-top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
-    <!-- </div> -->
+    <!--! go to top -->
+
+
+    <!--! J-query link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
+        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--! J-query link -->
+
+
+    <!--! slick-carousel link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!--! slick-carousel link -->
+
+
+
+    <script>
+        $(document).ready(function () {
+            $('.carousel').slick({
+                slidesToShow: 3,
+                centerMode: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        });
+    </script>
+
+
     <script src="./asset/script.js"></script>
 </body>
 

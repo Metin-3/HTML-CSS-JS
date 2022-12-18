@@ -27,9 +27,12 @@
         rel="stylesheet">
     <!--! Google fonts link -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
-        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!--! Animate css link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--! Animate css link -->
+
 
     <link rel="stylesheet" href="./asset/style.css">
     <title>Document</title>
@@ -45,7 +48,6 @@
             </div>
         </div>
         <!--! Loading -->
-
 
 
         <!--! top header start -->
@@ -74,25 +76,30 @@
 
 
         <!--! navbar start-->
-        <nav id="nav">
+        <nav id="nav" class="">
             <div class=" container">
                 <div class="row">
-                    <div class="col-lg-3 col-md-12 col-sm-12">
+                    <div class="col-lg-2 col-md-12 col-sm-12">
                         <div class="logo">
                             <img src="./asset/images/logo.png" alt="">
                         </div>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6">
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-6">
                         <ul class="nav-list">
 
+
+                            <li class="basket-list-item">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                <span class="countBasket">0</span>
+                            </li>
                         </ul>
 
                         <div class="hamburger-menu">
                             <button class="btn-bars-hamburger"><i class="fa-solid fa-bars"></i></button>
 
                             <ul class="nav-list-hamburger">
-                                <div class="close">
-                                    <img src="./asset/images/logo.png" alt="">
+                                <div class="close d-flex justify-content-between">
+                                    <img src="./asset/images/logo.png" class="w-50 my-2" alt="">
                                     <button class="close-btn"><i class="fa-solid fa-x"></i></button>
                                 </div>
 
@@ -133,14 +140,18 @@
     </header>
 
 
+
     <main>
         <!--! Winter Walking Shoes -->
-        <section>
-            <div class="container">
+        <section id="winter">
+            <div class="onlyImg">
+                <img src="./asset/images/13.jpg" alt="">
+            </div>
+            <div class="container" id="winterContainer">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 col-sm-12">
                         <div class="winter-img">
-                            <img src="./asset/images/13.jpg" alt="">
+                            <img src="./asset/images/13.jpg" id="Img" alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 col-sm-12">
@@ -180,7 +191,7 @@
         </section>
 
 
-        <!--! Description -->
+        <!--! Description and  Reviews buttons-->
         <section>
             <div class="container">
                 <div class="row">
@@ -190,7 +201,16 @@
                             <button class="reviews-btn">Reviews</button>
                         </div>
                     </div>
-                    <hr>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+        <!--! Description -->
+        <section id="description">
+            <div class="container">
+                <div class="row">
                     <div class="col-12">
                         <h2 class="my-5 description-h2">Product Description</h2>
                         <p class="description-paragraph">Leverage agile frameworks to provide a
@@ -210,15 +230,35 @@
         </section>
 
 
-
         <!--! Reviews -->
-        <!-- <section>
+        <section id="reviews">
             <div class="container">
                 <div class="row">
-                    <div class="col-6">
-                        <div class="d-flex">
-                            <div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="d-flex justify-content-between">
+                            <div class="user-icon">
                                 <span><i class="fa-solid fa-user"></i></span>
+                            </div>
+                            <div>
+                                <h3>Steven Rich<span> – January 17, 2019:</span></h3>
+                                <p>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </p>
+                                <p class="comment">
+                                    Value for money , I use it from long time and it is very useful and good product.
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12">
+                        <div class="d-flex justify-content-between">
+                            <div class="user-icon">
+                                <span><i class=" fa-solid fa-user"></i></span>
                             </div>
                             <div>
                                 <h3>Steven Rich <span>– January 17, 2019:</span></h3>
@@ -234,10 +274,40 @@
                                 </p>
                             </div>
                         </div>
+                        <hr>
+                    </div>
+                    <div class="col-12">
+                        <h2 class="my-4">Add Your Review</h2>
+                        <p class="text-secondary">Your email address will not be published. Required fields are marked *
+                        </p>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                        <label for="name">First Name *</label>
+                        <input type="text" id="name" class="w-100 my-3 py-2">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+                        <label for="email">Email*</label>
+                        <input type="email" id="email" class="w-100 my-3 py-2">
+                    </div>
+                    <div class="col-12">
+                        <span>Your Rating:</span>
+                        <span>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </span>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <label for="" class="my-4">Your Comments*</label>
+                        <textarea name="" id="" class="w-100" cols="15" rows="7"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button class="sendNow">Send Now</button>
                     </div>
                 </div>
-            </div>
-        </section> -->
+        </section>
 
 
         <!--! Raleted Products -->
@@ -248,43 +318,117 @@
                         <div class="d-flex justify-content-between mt-5">
                             <h1 class="carousel-header">Raleted Products</h1>
                             <div class="d-flex">
-                                <button class="btn-prev carousel-btn"><i class="fa-solid fa-chevron-left"></i></button>
-                                <button class="btn-next carousel-btn"><i class="fa-solid fa-chevron-right"></i></button>
+                                <button id="prev" class="btn-prev carousel-btn"><i
+                                        class="fa-solid fa-chevron-left"></i></button>
+                                <button id="next" class="btn-next carousel-btn"><i
+                                        class="fa-solid fa-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="wrapper">
-                            <div class="carousel">
-                                <div>
-                                    <img src="./asset/images/1 (1).jpg">
-                                    <h5>Cold Crewneck Sweater</h5>
-                                    <p>$40.75</p>
-                                </div>
-                                <div>
-                                    <img src="./asset/images/2 (1).jpg">
-                                    <h5>Cold Crewneck Sweater</h5>
-                                    <p>$40.75</p>
-                                </div>
-                                <div>
-                                    <img src="./asset/images/3 (1).jpg">
-                                    <h5>Cold Crewneck Sweater</h5>
-                                    <p>$40.75</p>
-                                </div>
-                                <div>
-                                    <img src="./asset/images/4 (1).jpg">
-                                    <h5>Cold Crewneck Sweater</h5>
-                                    <p>$40.75</p>
-                                </div>
-                                <div>
-                                    <img src="./asset/images/1.jpg">
-                                    <h5>Cold Crewneck Sweater</h5>
-                                    <p>$40.75</p>
-                                </div>
-                                <div>
-                                    <img src="./asset/images/3 (2).jpg">
-                                    <h5>Cold Crewneck Sweater</h5>
-                                    <p>$40.75</p>
+                        <div id="wrapper">
+                            <div id="carousel">
+                                <div id="content" class="my-5">
+                                    <div class="slide">
+                                        <img src="./asset/images/1 (1).jpg" />
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/2 (1).jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/3 (1).jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/4 (1).jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/1.jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/2.jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/3 (2).jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/4.jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/1.jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
+                                    <div class="slide">
+                                        <img src="./asset/images/2.jpg" alt="">
+                                        <div class="slide-icon animate__animated animate__bounce animate__fadeInUp">
+                                            <i class="fa-regular fa-heart"></i>
+                                            <i class="fa-solid fa-lock"></i>
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </div>
+                                        <p class="text-center">Side-Tie Tank</p>
+                                        <p class="text-center">$40.75</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -400,58 +544,10 @@
 
 
     <!--! go to top -->
-    <button onclick="topFunction()" id="go-to-top" class="back-to-top"><i class="fa-solid fa-arrow-up"></i></button>
+    <button onclick="topFunction()" id="go-to-top"
+        class="back-to-top animate__animated animate__bounce animate__fadeInUp"><i
+            class="fa-solid fa-arrow-up"></i></button>
     <!--! go to top -->
-
-
-    <!--! J-query link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"
-        integrity="sha512-tWHlutFnuG0C6nQRlpvrEhE4QpkG1nn2MOUMWmUeRePl4e3Aki0VB6W1v3oLjFtd0hVOtRQ9PHpSfN6u6/QXkQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--! J-query link -->
-
-
-    <!--! slick-carousel link -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-        integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!--! slick-carousel link -->
-
-
-
-    <script>
-        $(document).ready(function () {
-            $('.carousel').slick({
-                slidesToShow: 3,
-                centerMode: true,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
-    </script>
 
 
     <script src="./asset/script.js"></script>

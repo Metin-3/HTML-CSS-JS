@@ -20,7 +20,6 @@ fetch('https://fakestoreapi.com/products/categories')
         a.setAttribute("href", "#");
 
         a.innerText = `${j}`
-
     })
 
     )
@@ -41,8 +40,58 @@ fetch('https://fakestoreapi.com/products/categories')
         a.innerText = `${j}`
 
     })
-
     )
+
+
+
+//! basket and count-----------Winter Walking Shoes
+const countBasket = document.querySelector(".countBasket");
+const addCardBtn = document.querySelector(".addCard");
+
+const countSpan = document.querySelector(".count");
+const increase = document.querySelector(".increase");
+const decrease = document.querySelector(".decrease");
+
+const onlyImg = document.querySelector(".onlyImg");
+const winterContainer = document.querySelector("#winterContainer");
+const img = document.querySelector("#Img");
+const body = document.querySelector("body")
+
+let count = 0;
+let basket = 0;
+increase.addEventListener("click", (e) => {
+    count++
+    countSpan.innerText = count;
+})
+
+decrease.addEventListener("click", (e) => {
+    if (count > 0) {
+        count--;
+        countSpan.innerText = count
+    }
+})
+
+addCardBtn.addEventListener('click', (e) => {
+
+    basket++;
+
+    countBasket.innerText = `${basket}`;
+});
+
+img.addEventListener("click", (e) => {
+    e.stopPropagation()
+    winterContainer.style.display = "none";
+    onlyImg.style.display = "block";
+    body.style.overflowY = "hidden"
+})
+
+window.addEventListener("click", (e) => {
+    winterContainer.style.display = "block";
+    onlyImg.style.display = "none"
+    body.style.overflowY = "auto"
+
+})
+
 
 
 //! hamburger menu 
@@ -91,7 +140,7 @@ search.addEventListener("click", (e) => {
 
 
 
-
+//! go to top and scroll navbar
 window.onscroll = function () {
     if (document.documentElement.scrollTop > 200) {
         document.getElementById("nav").className = "nav-active";
@@ -110,24 +159,6 @@ function topFunction() {
 }
 
 
-//! count
-const countSpan = document.querySelector(".count");
-const increase = document.querySelector(".increase");
-const decrease = document.querySelector(".decrease");
-
-let count = 0
-increase.addEventListener("click", () => {
-    count++
-    countSpan.innerText = count;
-})
-
-decrease.addEventListener("click", () => {
-    if (count > 0) {
-        count--;
-        countSpan.innerText = count
-    }
-})
-
 
 
 //! loading
@@ -139,4 +170,90 @@ window.addEventListener("load", () => {
 })
 
 
-search
+
+
+
+
+
+// ! Raleted Products
+const gap = 16;
+
+const carousel = document.getElementById("carousel"),
+    content = document.getElementById("content"),
+    next = document.getElementById("next"),
+    prev = document.getElementById("prev");
+
+next.addEventListener("click", (e) => {
+    carousel.scrollBy(width + gap, 0);
+});
+prev.addEventListener("click", (e) => {
+    carousel.scrollBy(-(width + gap), 0);
+});
+
+let width = 270;
+
+
+
+
+//! Description and Reviews
+const descriptionBtn = document.querySelector(".description-btn");
+const reviewsBtn = document.querySelector(".reviews-btn");
+const description = document.querySelector("#description");
+const reviews = document.querySelector("#reviews");
+const nameInput = document.querySelector("#name");
+const emailInput = document.querySelector("#email");
+const star = document.querySelectorAll(".fa-star");
+const textarea = document.querySelector("textarea");
+
+
+descriptionBtn.addEventListener("click", (e) => {
+    if (description.style.display = "none") {
+        description.style.display = "block";
+        reviews.style.display = "none"
+        descriptionBtn.style.backgroundColor = "#ff4747";
+        descriptionBtn.style.color = "#fff";
+        reviewsBtn.style.backgroundColor = "#fff";
+        reviewsBtn.style.color = "#ff4747";
+    }
+});
+
+
+reviewsBtn.addEventListener("click", (e) => {
+    if (reviews.style.display = "none") {
+        description.style.display = "none";
+        reviews.style.display = "block"
+        descriptionBtn.style.backgroundColor = "#fff";
+        descriptionBtn.style.color = "#ff4747";
+        reviewsBtn.style.backgroundColor = "#ff4747";
+        reviewsBtn.style.color = "#fff";
+    }
+})
+
+nameInput.addEventListener("keyup", (e) => {
+    if (nameInput.value.trim() == "") {
+        nameInput.style.borderColor = "red";
+    } else {
+        nameInput.style.borderColor = "blue";
+    }
+})
+
+emailInput.addEventListener("keyup", (e) => {
+    if (emailInput.value.trim() == "") {
+        emailInput.style.borderColor = "red";
+    } else {
+        emailInput.style.borderColor = "blue";
+    }
+})
+
+textarea.addEventListener("keyup", (e) => {
+    if (textarea.value.trim() == "") {
+        textarea.style.borderColor = "red";
+    } else {
+        textarea.style.borderColor = "blue";
+    }
+})
+
+
+
+
+

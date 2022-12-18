@@ -10,6 +10,7 @@ a {
     text-decoration: none;
 }
 
+
 /*! Loading  start*/
 body {
     overflow-y: hidden;
@@ -29,7 +30,7 @@ body {
     left: 50%;
 }
 
-/*! Loading */
+/*! Loading end*/
 
 
 
@@ -101,7 +102,10 @@ body {
     width: 100%;
     z-index: 9999;
     background-color: #fff;
-    transition: 0.5s;
+    transition: 0.7s;
+    display: inline-block;
+    animation: fadeInDown;
+    animation-duration: 0.8s;
 }
 
 .logo {
@@ -110,7 +114,7 @@ body {
 
 .nav-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 0;
@@ -126,11 +130,19 @@ body {
     transition: 0.5s;
 }
 
+.nav-list a {
+    color: #000;
+    font-family: sans-serif;
+    position: relative;
+    transition: 0.5s;
+    z-index: 999;
+}
+
 .nav-list a:hover {
     color: #ff4747;
 }
 
-.nav-list a::before {
+.nav-list li::before {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -141,10 +153,21 @@ body {
     background-color: #ff4747;
 }
 
+.nav-list a::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    transition: 0.5s;
+    background-color: #ff4747;
+}
+
 .nav-list a::after {
     content: '';
     position: absolute;
-    top: -2px;
+    top: -1px;
     right: 0;
     height: 2px;
     width: 0;
@@ -158,6 +181,31 @@ body {
 
 .nav-list a:hover::before {
     width: 100%;
+}
+
+.basket-list-item {
+    position: relative;
+    margin-right: 15px;
+}
+
+.basket-list-item i {
+    font-size: 25px;
+}
+
+.countBasket {
+    position: absolute;
+    top: -15px;
+    right: -20px;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #ff4747;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #ff4747;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .hamburger-menu {
@@ -194,10 +242,6 @@ body {
     font-weight: 400;
     font-size: 20px;
     font-family: sans-serif;
-}
-
-.close {
-    text-align: end;
 }
 
 .close .close-btn {
@@ -352,6 +396,39 @@ body {
 
 
 /*! Winter Walking Shoes */
+#winter {
+    position: relative;
+}
+
+.onlyImg {
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    display: none;
+    animation: fadeInLeft;
+    animation-duration: 2s;
+    z-index: 9999;
+}
+
+.onlyImg img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25%;
+}
+
+@media(max-width: 768px) {
+    .onlyImg img {
+        width: 70%;
+    }
+}
+
+#winterContainer {
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+
 .winter-img {
     display: flex;
     justify-content: center;
@@ -362,6 +439,7 @@ body {
 
 .winter-img img {
     width: 90%;
+    cursor: pointer;
 }
 
 .winter-inner {
@@ -485,6 +563,11 @@ body {
     margin-left: 10px;
 }
 
+#description {
+    animation: fadeInUp;
+    animation-duration: 1.5s;
+}
+
 .description-h2 {
     font-family: 'Mulish', sans-serif;
     color: #1a224d;
@@ -499,9 +582,74 @@ body {
 
 
 
+/*! Reviews start*/
+#reviews {
+    margin: 30px 0;
+    display: none;
+    animation: fadeInUp;
+    animation-duration: 2s;
+}
+
+.user-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #e9e9ec;
+    border-radius: 50%;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    background-color: #777;
+    color: #fff;
+    font-size: 22px;
+}
+
+.fa-star {
+    cursor: pointer;
+}
+
+.sendNow {
+    margin: 15px 0;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    background-color: #ff4747;
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: 0.5s;
+}
+
+.sendNow:hover {
+    border-color: #ff4747;
+    background-color: #fff;
+    color: #ff4747;
+}
+
+#name {
+    outline: none;
+    border: 1px solid #777;
+}
+
+#email {
+    outline: none;
+    border: 1px solid #777;
+}
+
+textarea {
+    outline: none;
+    border: 1px solid #777;
+
+}
+
+/*! Reviews end*/
 
 
-/*! Raleted Products */
+
+
+
+/*! Raleted Products  start*/
 #products {
     margin-bottom: 10%;
 }
@@ -578,9 +726,75 @@ body {
     color: white;
 }
 
+#wrapper {
+    width: 100%;
+    position: relative;
+}
+
+#carousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+#carousel::-webkit-scrollbar {
+    height: 0;
+}
+
+#content {
+    display: grid;
+    grid-gap: 16px;
+    grid-auto-flow: column;
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.slide {
+    position: relative;
+}
+
+.slide-icon {
+    position: absolute;
+    transition: 0.5s;
+    display: none;
+}
+
+.slide-icon i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #ff4747;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.slide-icon i:hover {
+    background-color: #ff4747;
+    color: #fff;
+    border-color: #ff4747;
+}
+
+.slide:hover .slide-icon {
+    position: absolute;
+    top: 50%;
+    left: 22%;
+    display: flex;
+    gap: 20px;
+}
+
+/*! Raleted Products  end*/
 
 
-/*! Subscribe to Our Newsletter */
+
+
+
+/*! Subscribe to Our Newsletter   start*/
 #footer {
     padding-top: 80px;
     position: relative;
@@ -635,9 +849,11 @@ body {
     border-color: #000;
 }
 
+/*! Subscribe to Our Newsletter   end*/
 
 
-/*! footer */
+
+/*! footer start*/
 #footer {
     background-color: #472183;
     color: #fff;
@@ -650,7 +866,7 @@ body {
 .footer-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 10px;
 }
 
 .footer-list li a {
@@ -738,15 +954,39 @@ body {
     }
 }
 
+/*! footer end */
+
+
+
+
+
+
 /*! go-to-top */
 .back-to-top {
     display: none;
     border: none;
-    padding: 5px 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
     background-color: #ff4747;
     color: #fff;
     position: fixed;
     bottom: 20px;
     right: 20px;
-    border-radius: 5px;
+    border-radius: 50%;
+}
+
+.back-to-top i {
+    width: 50px;
+    height: 50px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff4747;
+    transition: 0.5s;
+}
+
+.back-to-top:hover i {
+    background-color: #cf3f3f;
 }
